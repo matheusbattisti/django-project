@@ -5,7 +5,7 @@ def post_list(request):
 	return render(request, 'blog/post_list.html')
 
 def about(request):
-	return HttpResponse('Sobre nós.')
+	return render(request, 'blog/about_us.html')
 
 def contact(request):
-	return HttpResponse('Página de contato.')
+	return render(request, 'blog/contact.html')
