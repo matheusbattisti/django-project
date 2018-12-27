@@ -8,6 +8,7 @@ class Post(models.Model):
 		('draft', 'Rascunho')
 	)
 	title = models.CharField(max_length=200)
+	slug = models.SlugField(max_length=200)
 	body = models.TextField()
 	author = models.ForeignKey(User, on_delete=models.CASCADE)
 	created_at = models.DateField(auto_now_add=True)

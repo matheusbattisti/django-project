@@ -18,7 +18,7 @@
 		          <h5 class="card-title">{{ post.title }}</h5>
 							<p class="card-text">{{ post.body|truncatechars:50 }}...</p>
 							<p>Criado em {{ post.created_at }} por {{ post.author }}</p>
-		          <a href="#" class="btn btn-primary">Ver o post completo</a>
+		          <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Ver o post completo</a>
 		        </div>
 		      </div>
 				</div>
