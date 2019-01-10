@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block title %}Crie sua conta{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>Crie sua conta</h1>
+		<form action="." method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<input class="btn btn-primary" type="submit" value="Registrar">
+		</form>
+	</div>
+{% endblock %}
