@@ -1,0 +1,118 @@
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navbar {
+	background-color: #29AB87;
+}
+
+.navbar .navbar-brand {
+	color: #FFF;
+}
+
+.navbar .navbar-brand:hover {
+	color: #FFF;
+}
+
+.navbar .nav-item .nav-link {
+	color: #FFF;
+	transition: .5s;
+}
+
+.navbar .nav-item .nav-link:hover {
+	background-color: #FFF;
+	color:#29AB87;
+}
+
+.submenu-auth {
+	background-color: #111;
+    position: relative;
+    top: -16px;
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+	margin: auto;
+	border-radius: 0;
+}
+
+.card-img-top {
+	border-radius: 0;
+}
+
+.card .btn-primary {
+	background-color: #29AB87;
+	border-color: #29AB87;
+}
+
+.card .btn-primary:hover {
+	background-color: #FFF;
+	color: #29AB87;
+}
+
+.row .jumbotron {
+	background-color: #00A572;
+	color: #FFF;
+	margin-top: 50px;
+}
+
+.card .btn.btn-primary {
+	margin: auto;
+	display: block;
+}
+
+.logged-in-p {
+	background-color: #000;
+	color: #FFF;
+	padding: 10px;
+	width: 100%;
+}
+
+.logged-in-p span {
+	display: block;
+	float: right;
+}
+
+.logged-in-p a {
+	color: #ffe484;
+}
+
+.container .step-links {
+	display: block;
+    width: 200px;
+    margin: 30px auto;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    padding-top: 15px;
+}
+
+body footer {
+	height: 200px;
+	position: relative;
+	border-top: 3px solid #00A572;
+}
+
+.step-links a {
+	color: #00A572;
+	transition: .5s;
+}
+
+.step-links a:hover {
+	color: #000;
+}
+
+footer .copy {
+	position: absolute;
+    bottom: 15px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+{% extends 'blog/base.html' %}
+{% block title %}Listagem de Posts{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container">
+		    <h1 class="display-4">Bem vindo ao Django blog!</h1>
+		    <p class="lead">Aqui você vai encontrar os melhores posts sobre o framework.</p>
+		  </div>
+		</div>
+		<div class="row">
+				{% for post in posts %}
+		    <div class="col">
+		      <div class="card" style="width: 18rem;">
+		        <img class="card-img-top" src="https://via.placeholder.com/286x180" alt="Card image cap">
+		        <div class="card-body">
+		          <h5 class="card-title">{{ post.title }}</h5>
+							<p class="card-text">{{ post.body|truncatechars:50 }}...</p>
+							<p>Criado em {{ post.created_at }} por {{ post.author }}</p>
+							<a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">Ver o post completo</a>
+							{% if user.is_authenticated %}
+								<p><a href="{% url 'blog:post_update' post.id %}">Editar post</a></p>
+							{% endif %}
+		        </div>
+		      </div>
+				</div>
+				{% endfor %}
+		</div>
+		<div class="pagination">
+			<span class="step-links">
+					{% if posts.has_previous %}
+							<a href="?page={{ posts.previous_page_number }}">Anterior</a>
+					{% endif %}
+	
+					<span class="current">
+							{{ posts.number }} de {{ posts.paginator.num_pages }}
+					</span>
+	
+					{% if posts.has_next %}
+							<a href="?page={{ posts.next_page_number }}">Próxima</a>
+					{% endif %}
+			</span>
+		</div>
+	</div> 
+{% endblock %}

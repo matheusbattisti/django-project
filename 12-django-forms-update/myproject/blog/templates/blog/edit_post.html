@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block title %}Editar '{{post.title}}'{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1>Editar '{{post.title}}'</h1>
+		<div>
+            <form action="." method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-default" value="Editar">
+            </form>
+            
+        </div>
+	</div>
+{% endblock %}
